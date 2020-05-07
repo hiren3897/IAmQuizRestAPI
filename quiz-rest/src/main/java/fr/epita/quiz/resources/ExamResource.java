@@ -178,7 +178,7 @@ public class ExamResource {
 		}
 		Exam exam = examDAO.getById(examDTO.getId());
 		examDAO.delete(exam);
-		return Response.status(202).entity("Exam deleted successfully !!").build();
+		return Response.status(Status.OK).entity(examDTO).build();
 	}
 
 }
